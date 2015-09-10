@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Simple Functions. More complicated stuff should go in $CONFIG/bin
 
 #Move to folder and list

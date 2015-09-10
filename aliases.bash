@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Aliases go here
 alias la='ls -AF' #list all
 alias ll='ls -alhF' #list all long
