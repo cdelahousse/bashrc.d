@@ -42,6 +42,10 @@ if ((BASH_VERSINFO[0] >= 4)) ; then
   shopt -s dirspell # Autocorrect paths during completion
 fi
 
+# After each command, append to the history file and reread it
+# http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
 BASHRCD=$CONFIGD/bashrc.d
 source $BASHRCD/aliases.bash
 source $BASHRCD/functions.bash

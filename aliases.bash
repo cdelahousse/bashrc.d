@@ -5,6 +5,12 @@ alias l='ls -CF' #List
 alias mc='make clean'
 alias sim="sudo vim" 
 
+# makes a backup of source when the force and backup options are given and source
+# and dest are the same name for an existing, regular file
+alias cp='cp --backup=numbered'
+alias ln='ln --backup=numbered'
+alias mv='mv -f --backup=numbered'
+
 #Git
 alias grd='git rm $(git ls-files --deleted)'
 alias gamend='git commit --amend -C HEAD'
