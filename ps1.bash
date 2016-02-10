@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Colours
 BLUE="\[\033[1;34m\]"
 CYAN="\[\033[1;36m\]"

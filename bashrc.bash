@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Christian Delahousse's Bash Settings
 # http://christian.delahousse.ca
 # http://github.com/cdelahousse
@@ -51,4 +53,10 @@ source $BASHRCD/aliases.bash
 source $BASHRCD/functions.bash
 source $BASHRCD/ps1.bash
 source $BASHRCD/mac.bash
+
+#Put every local alias into the following file
+LOCALALIASES=~/.local_aliases.bash 
+if [ -e $LOCALALIASES ]; then
+  source $LOCALALIASES
+fi
 

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Mac Settings
 
 if [[ `uname` == 'Darwin' ]]; then 
