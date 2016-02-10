@@ -34,6 +34,9 @@ alias webserv='echo Port 8000;python -m SimpleHTTPServer 8000'
 alias webserv2='echo port 9000;python -m SimpleHTTPServer 9000'
 alias psme='ps aux | grep '"$(whoami)"
 
+# Make terminal beep
+alias beep="echo -e \"\a\""
+
 # Go up directories
 alias ..='cd ..'
 alias ...='cd ../..'
