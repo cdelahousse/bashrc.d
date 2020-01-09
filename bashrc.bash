@@ -50,7 +50,6 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 
 BASHRCD=$CONFIGD/bashrc.d
 source $BASHRCD/aliases.bash
-source $BASHRCD/functions.bash
 source $BASHRCD/ps1.bash
 source $BASHRCD/mac.bash
 
