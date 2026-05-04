@@ -8,8 +8,12 @@ if [ -n "${BASH_VERSION:-}" ]; then
 
   PS1='$([ $? -eq 0 ] && echo "'"$GREEN"'" || echo "'"$RED"'")'
   PS1+='\D{%m/%d %R} '
-  PS1+="$PINK"'\u'"$NO_COLOR"
-  PS1+='@'"$BLUE"'\h '
+
+  # Only show user@hostname during SSH connection
+  if [ -n "${SSH_CONNECTION:-}" ]; then
+    PS1+="$PINK"'\u'"$NO_COLOR"'@'"$BLUE"'\h '"$NO_COLOR"
+  fi
+
   PS1+="$CYAN"'\w'
   PS1+='\n'"$NO_COLOR"'\$ '
 
@@ -19,8 +23,12 @@ fi
 if [ -n "${ZSH_VERSION:-}" ]; then
   PROMPT='%(?.%F{green}.%F{red})'
   PROMPT+='%D{%m/%d %H:%M} '
-  PROMPT+='%F{magenta}%n%f'
-  PROMPT+='@%F{blue}%m '
+
+  # Only show user@hostname during SSH connection
+  if [ -n "${SSH_CONNECTION:-}" ]; then
+    PROMPT+='%F{magenta}%n%f@%F{blue}%m%f '
+  fi
+
   PROMPT+='%F{cyan}%~'
   PROMPT+=$'\n%f%# '
 fi
