@@ -1,4 +1,3 @@
-Christian Delahousse's bashrc
+Add the following line
 
-    source bashrc.d/bashrc.bash
-
+source ~/Dropbox/config/shrc.d/shrc.sh
