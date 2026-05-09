@@ -64,7 +64,13 @@ elif [ -n "$ZSH_VERSION" ]; then
   setopt SHARE_HISTORY
 fi
 
-SHRCD=$CONFIGD/shrc.d
+if [ -n "$ZSH_VERSION" ]; then
+  SCRIPT_PATH="${(%):-%N}"
+else
+  SCRIPT_PATH="${BASH_SOURCE[0]}"
+fi
+
+SHRCD="$(cd -- "$(dirname -- "$SCRIPT_PATH")" && pwd)"
 source $SHRCD/aliases.sh
 source $SHRCD/ps1.sh
 source $SHRCD/mac.sh
