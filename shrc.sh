@@ -52,6 +52,9 @@ elif [ -n "$ZSH_VERSION" ]; then
   SAVEHIST=500000
   export HISTFILE="${HISTFILE:-$HOME/.zsh_history}"
 
+  # Ctrl-R reverse history search in zsh
+  bindkey '^R' history-incremental-search-backward
+
   setopt CORRECT          # Ignore minor cd directory misspellings
   setopt HIST_IGNORE_DUPS
   setopt HIST_IGNORE_SPACE
