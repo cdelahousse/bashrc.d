@@ -25,5 +25,8 @@ if [ "$(uname)" = "Darwin" ]; then
   # aliases I set elsewhere in these config files
   unalias mv 2>/dev/null
   unalias cp 2>/dev/null
+
+  # Macdown for Markdown files. I want to open these from the command line
+  alias macdown='open -a MacDown'
 fi;
 
